@@ -4,6 +4,7 @@
 <title>Sahil Mishra | MCA Portfolio</title> 
 <link rel="stylesheet" href="styles.css"> 
 </head> 
+
 <body> 
  
  
@@ -94,19 +95,104 @@ odio incidunt ab tempora eligendi.</p>
     </section> 
  
     <section id="contact" class="section contact"> 
-        <h2>Contact</h2> 
-        <p>Let's connect and collaborate on future projects.</p> 
-        <div class="contact-info"> 
-            <p><strong>   Phone:</strong> <a href="tel:123456789">123456789</a></p> 
-            <p><strong>        Email:</strong> <a 
-href="mailto:forexample@gmail.com">forexample@gmail.com</a></p> 
-        </div> 
-    </section> 
+    <h2>Contact</h2> 
+    <p>Let's connect and collaborate on future projects.</p> 
+    
+    <div class="contact-info"> 
+        <p><strong>Phone:</strong> <a href="tel:123456789">123456789</a></p> 
+        <p><strong>Email:</strong> <a href="mailto:forexample@gmail.com">forexample@gmail.com</a></p> 
+    </div> 
+
+    <!-- Contact Form -->
+    <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" 
+                   pattern="[0-9]{10}" required>
+            <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Your message..." required></textarea>
+            <small class="error-message"></small>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+        <p id="successMessage" style="display:none; color:green; margin-top:10px;">Message sent successfully!</p>
+    </form>
+</section>
+
  
     <footer> 
         <p>© 2025 Sahil Mishra | Build using HTML & CSS</p> 
     </footer> 
  
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // prevent form submission
+
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const phone = document.getElementById('phone');
+    const message = document.getElementById('message');
+    const successMessage = document.getElementById('successMessage');
+    const errorMessages = document.querySelectorAll('.error-message');
+
+    // Clear previous errors
+    errorMessages.forEach(msg => msg.textContent = '');
+
+    let valid = true;
+
+    // Name validation
+    if (name.value.trim().length < 3) {
+        name.nextElementSibling.textContent = "Name must be at least 3 characters.";
+        valid = false;
+    }
+
+    // Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email.value)) {
+        email.nextElementSibling.textContent = "Please enter a valid email address.";
+        valid = false;
+    }
+
+    // Phone validation
+    const phonePattern = /^[0-9]{10}$/;
+    if (!phonePattern.test(phone.value)) {
+        phone.nextElementSibling.textContent = "Phone number must be 10 digits.";
+        valid = false;
+    }
+
+    // Message validation
+    if (message.value.trim().length < 10) {
+        message.nextElementSibling.textContent = "Message should be at least 10 characters.";
+        valid = false;
+    }
+
+    // If all fields are valid
+    if (valid) {
+        successMessage.style.display = 'block';
+        document.getElementById('contactForm').reset();
+        setTimeout(() => successMessage.style.display = 'none', 3000);
+    }
+});
+</script>
+
+
+
 </body> 
  
 </html> 
