@@ -1,0 +1,196 @@
+/* ===== General Reset ===== */ 
+* { 
+margin: 0; 
+padding: 0; 
+box-sizing: border-box; 
+} 
+body { 
+font-family: 'Poppins', sans-serif; 
+background-color: #f9f6f2; 
+ 
+    color: #3e2f21; 
+    line-height: 1.7; 
+} 
+ 
+/* ===== Navbar ===== */ 
+nav { 
+    background-color: #5a3825; 
+    color: #f8f5f1; 
+    padding: 15px 0; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    position: sticky; 
+    top: 0; 
+    z-index: 10; 
+} 
+ 
+.nav-content { 
+    width: 90%; 
+    max-width: 1000px; 
+    margin: auto; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+} 
+ 
+.logo { 
+    font-weight: 600; 
+ 
+    font-size: 1.4em; 
+} 
+ 
+.nav-links { 
+    list-style: none; 
+    display: flex; 
+    gap: 25px; 
+} 
+ 
+.nav-links a { 
+    text-decoration: none; 
+    color: #f8f5f1; 
+    font-weight: 500; 
+    transition: color 0.3s; 
+} 
+ 
+.nav-links a:hover { 
+    color: #e0b97d; 
+} 
+ 
+/* ===== Hero Section ===== */ 
+.hero { 
+    background: linear-gradient(135deg, #8b5e3c, #d4a574); 
+    color: #fff; 
+    text-align: center; 
+    padding: 80px 20px; 
+ 
+} 
+ 
+.profile-pic { 
+    width: 130px; 
+    height: 130px; 
+    border-radius: 50%; 
+    border: 3px solid #fff; 
+    object-fit: cover; 
+    margin-bottom: 20px; 
+} 
+ 
+.hero h1 { 
+    font-size: 2.6em; 
+    font-weight: 600; 
+} 
+ 
+.hero span { 
+    color: #ffe9c4; 
+} 
+ 
+.subtitle { 
+    font-size: 1.1em; 
+    opacity: 0.9; 
+    margin-top: 10px; 
+} 
+ 
+ 
+.intro { 
+    max-width: 650px; 
+    margin: 15px auto 25px auto; 
+    font-size: 1em; 
+} 
+ 
+.btn { 
+    background-color: #5a3825; 
+    color: #fff; 
+    padding: 12px 28px; 
+    border-radius: 30px; 
+    text-decoration: none; 
+    font-weight: 500; 
+    transition: background 0.3s; 
+} 
+ 
+.btn:hover { 
+    background-color: #3e2f21; 
+} 
+ 
+/* ===== Sections ===== */ 
+.section { 
+    max-width: 900px; 
+    margin: 60px auto; 
+    padding: 30px; 
+    background-color: #fff; 
+ 
+    border-radius: 12px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+} 
+ 
+.section h2 { 
+    color: #8b5e3c; 
+    border-bottom: 2px solid #d4a574; 
+    display: inline-block; 
+    margin-bottom: 20px; 
+} 
+ 
+/* ===== Skill Cards ===== */ 
+.skill-cards { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 20px; 
+} 
+ 
+.skill-card { 
+    background-color: #f8f1e7; 
+    padding: 20px; 
+    border-radius: 10px; 
+    border: 1px solid #d4a574; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+} 
+ 
+ 
+.skill-card:hover { 
+    transform: translateY(-6px); 
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); 
+} 
+ 
+.skill-card h3 { 
+    color: #5a3825; 
+    margin-bottom: 8px; 
+} 
+ 
+/* ===== Contact ===== */ 
+.contact-info a { 
+    color: #8b5e3c; 
+    text-decoration: none; 
+    font-weight: 500; 
+} 
+ 
+.contact-info a:hover { 
+    text-decoration: underline; 
+} 
+ 
+/* ===== Experience Card ===== */ 
+.experience-card { 
+    background-color: #f8f1e7; 
+    padding: 20px; 
+    border-radius: 10px; 
+ 
+    border: 1px solid #d4a574; 
+    margin-bottom: 30px; 
+} 
+ 
+/* ===== Footer ===== */ 
+footer { 
+    background-color: #5a3825; 
+    color: #f8f5f1; 
+    text-align: center; 
+    padding: 15px; 
+    margin-top: 50px; 
+    font-size: 0.9em; 
+} 
+ 
+.college-info { 
+ 
+    background-color: #f8f1e7; 
+    padding: 20px; 
+    border-radius: 10px; 
+    border: 1px solid #d4a574; 
+    margin-bottom: 30px; 
+ 
+} 
+ 
